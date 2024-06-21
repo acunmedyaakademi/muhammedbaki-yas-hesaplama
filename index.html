@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yaş Hesaplama</title>
+  <link rel="stylesheet" href="assets/css/age-calculator.css">
+  <script src="assets/js/age-calculator.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <form class="date" novalidate>
+      <div class="dayDiv">
+        <label for="gun">Gün</label>
+        <input required type="number" class="gun" name="gun" placeholder="GG">
+        <span class="error-message">Geçerli bir gün olmalı</span>
+      </div>
+      <div class="monthDiv">
+        <label for="ay">Ay</label>
+        <input required type="number" class="ay" name="ay" placeholder="AA">
+        <span class="error-message">Geçerli bir ay olmalıdır</span>
+      </div>
+      <div class="yearDiv">
+        <label for="yil">Yıl</label>
+        <input required type="number" class="yil" name="yil" placeholder="YYYY">
+        <span class="error-message">Geçmişte kalmış olmalı</span>
+      </div>
+      <div class="buttonDiv">
+        <hr>
+        <button type="submit"><img src="assets/down-arrow.png" alt="aşağı ok işareti"></button>
+      </div>
+    </form>
+    <div class="sonucDiv">
+      <p><span class="yılSonuc">--</span>Yıl </p>
+      <p><span class="aySonuc">--</span>Ay </p>
+      <p><span class="günSonuc">--</span>Gün </p>
+    </div>
+  </div>
+</body>
+
+</html>

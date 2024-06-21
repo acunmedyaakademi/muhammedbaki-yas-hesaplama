@@ -1,0 +1,265 @@
+@font-face {
+  font-family: poppins;
+  src: url("../Poppins-Medium.ttf");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: poppins;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: #F0F0F0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.container {
+  width: 840px;
+  margin: 25px auto;
+  border-radius: 24px 24px 200px 24px;
+  background-color: white;
+  padding: 56px;
+}
+
+
+.date {
+  display: grid;
+  grid-template-areas: 
+  "daydiv monthDiv yearDiv"
+  "buttonDiv buttonDiv buttonDiv";
+  gap: 32px;  
+}
+
+.dayDiv {
+  grid-area: daydiv;
+}
+
+.monthDiv {
+  grid-area: monthDiv;
+}
+
+.yearDiv {
+  grid-area: yearDiv;
+}
+
+.buttonDiv {
+  grid-area: buttonDiv;
+}
+
+.date div:not(.buttonDiv) {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.date label {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0.25em;
+  text-align: left;
+  color: #716F6F;
+}
+
+.date input {
+  width: 160px;
+  padding-block: 12px;
+  padding-left: 24px;
+  border-radius: 8px;
+  border: 1px solid #DCDCDC;
+  outline: none;
+  cursor: pointer;
+}
+
+.date input:focus {
+  accent-color: #854DFF;
+  border: 1px solid #854DFF;
+}
+
+.buttonDiv {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.buttonDiv hr {
+  width: 728px;
+  height: 1px;
+  z-index: 1;
+  border: none;
+  background-color: #DCDCDC;
+}
+
+.buttonDiv button {
+  border-radius: 48px;
+  padding: 26px;
+  background-color: #854DFF;
+  border: none;
+  cursor: pointer;
+}
+
+.buttonDiv button:active {
+  border-radius: 48px;
+  padding: 26px;
+  background-color: black;
+  border: none;
+}
+
+.sonucDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sonucDiv p {
+  font-size: 104px;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 114.4px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.sonucDiv span {
+  font-size: 104px;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 114.4px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: #854DFF;
+}
+ 
+.error-message {
+  display: none;
+  color: red;
+}
+
+.validated div:has(:invalid) .error-message {
+  display: block;
+} 
+.validated div:has(:invalid) input {
+  border-color: red;
+}
+.validated div:has(:invalid) label {
+  color:  red;
+}
+
+
+@media (width <=375px) {
+
+  .container {
+    width: 375px;
+    margin: 25px auto;
+    border-radius: 24px 24px 200px 24px;
+    background-color: white;
+    padding: 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+
+
+  .date {
+    display: flex;
+    gap: 16px;
+  }
+
+  .date div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+  }
+
+  .date p {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.25em;
+    text-align: left;
+    color: #716F6F;
+  }
+
+  .date input {
+    width: 88px;
+    padding-block: 12px;
+    padding-left: 16px;
+    border-radius: 8px;
+    border: 1px solid #DCDCDC;
+    outline: none;
+    cursor: pointer;
+  }
+  .buttonDiv {
+    width: 295px;
+    margin: 0 auto;
+    padding-block: 32px;
+  }
+  .buttonDiv hr {
+    width: 295px;
+  }
+
+  .buttonDiv button {
+    position: absolute;
+    z-index: 2;
+  }
+  .sonucDiv p {
+    font-size: 56px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 61.6px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    
+  }
+  
+  .sonucDiv span {
+    font-size: 56px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 61.6px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    
+  }
+}
